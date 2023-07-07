@@ -1,0 +1,67 @@
+body, ul {
+    margin: 0;  /* ブラウザのデフォルトのマージンを無効にする */
+    padding: 0; /* ブラウザのデフォルトのパディングを無効にする */
+}
+
+/* ヘッダー */
+header {
+    display: flex; /* ヘッダーの中身を横並びにする */
+    justify-content: space-between; /* ロゴとナビゲーションの間にスペースを開ける */
+    align-items: center; /* ロゴとナビゲーションを上下中央に配置 */
+    padding: 20px 10%; /* ヘッダー内の余白設定 */
+    background-color: #24252A; /* ヘッダーの背景色設定 */
+}
+
+.logo, .nav_links a {
+    color: #fff; /* ロゴとナビゲーションリンクの文字色を白に設定 */
+    text-decoration: none; /* リンクの下線をなくす */
+}
+
+.logo {
+    text-transform: uppercase; /* ロゴの文字を大文字に変換 */
+    letter-spacing: 3px; /* ロゴの文字間隔を3pxに設定 */
+}
+
+.nav_links {
+    list-style: none; /* ナビゲーションのリストマーカーを無効にする */
+    display: flex; /* ナビゲーションを横並びにする */
+    align-items: center; /* ナビゲーションを上下中央に配置 */
+}
+
+.nav_links li {
+    padding: 0 10px; /* ナビゲーションのリンク間隔を設定 */
+}
+
+.nav_links a {
+    transition: all 0.3s ease; /* ナビゲーションリンクの色が変わる速度を設定 */
+}
+
+.nav_links a:hover {
+    color: #0088a9; /* ナビゲーションリンクをホバー時の色を設定 */
+}
+
+/* メイン */
+.image-container {
+    display: flex; /* 画像と説明文を縦並びにする */
+    flex-direction: column; /* 画像と説明文を縦並びにする */
+    justify-content: center; /* 画像と説明文を上下中央に配置 */
+    align-items: center; /* 画像と説明文を左右中央に配置 */
+    margin: 100px; /*画像と説明文のコンテナーのマージン設定 */
+}
+
+.main-img {
+    width: 220px; /* 画像の幅を設定 */
+    height: 220px; /* 画像の高さを設定 */
+    border-radius: 50%; /* 画像を丸くする */
+    transition: all 0.5s ease;  /* hover時のトランジションをここにまとめる */
+}
+
+.main-img:hover {
+    border-radius: 5%;  /* hover時に角丸を5%に変更 */
+}
+
+main {
+    display: flex; /* メインコンテンツ（画像と説明文のコンテナー）を横並びにする */
+    justify-content: space-around; /* 画像と説明文のコンテナー間に均等なスペースを配置 */
+}
+
