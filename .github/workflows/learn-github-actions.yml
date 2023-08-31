@@ -1,13 +1,22 @@
 name: lern-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
+# pushをトリガーにする
 on: [push]
+# ジョブのグループ化
 jobs:
+  # check-bats-versionというジョブを定義
   check-bats-version:
+    # ジョブのgithub上の実行環境を指定
     runs-on: ubunts-latest
+    # check-bats-versionというジョブのステップをグループ化
     steps:
+      # usesキーワードactions/checkout@v3を実行すると定義(Repositoryにランナーをチェックアウトさせる)
       - uses: actions/checkout@3
+      # usesキーワードactions/setup-node@v1を実行すると定義(Nodeをインストールする)
       - uses: actions/setup-node@3
         with:
           node-version: '14'
+      # runキーワードを実行すると定義(npmでbatsライブラリをインストールする)
       - run: npm install -g bats
+      # runキーワードを実行すると定義(batsのバージョンを確認する)
       - run: bats -v
