@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     # check-bats-versionというジョブのステップをグループ化
     steps:
-      # usesキーワードactions/checkout@v3を実行すると定義(Repositoryにランナーをチェックアウトさせる)
-      - uses: actions/checkout@3
+      # usesキーワードactions/checkout@v2を実行すると定義(Repositoryにランナーをチェックアウトさせる)
+      - uses: actions/checkout@v2
       # usesキーワードactions/setup-node@v1を実行すると定義(Nodeをインストールする)
-      - uses: actions/setup-node@3
+      - uses: actions/setup-node@v1
         with:
           node-version: '14'
       # runキーワードを実行すると定義(npmでbatsライブラリをインストールする)
