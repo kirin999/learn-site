@@ -21,3 +21,4 @@ jobs:
       # runキーワードを実行すると定義(batsのバージョンを確認する)
       - run: bats -v
       - run: echo "Hello, world!"
+      - run: ls -la
